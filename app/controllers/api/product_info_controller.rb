@@ -1,5 +1,6 @@
 class Api::ProductInfoController < ApplicationController
   def first
-    get "/first_product" => "product_info#first"
+    @product = Product.first
+    render "product.json.jb"
   end
 end
